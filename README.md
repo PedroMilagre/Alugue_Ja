@@ -6,6 +6,4 @@ Este projeto tem como foco a estruturação de páginas modernas, com design res
 
 ---
 
-## 📸 Demonstração
-
 [🔗 Teste agora](https://pedromilagre.github.io/Alugue_Ja/)
