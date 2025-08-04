@@ -8,4 +8,4 @@ Este projeto tem como foco a estruturação de páginas modernas, com design res
 
 ## 📸 Demonstração
 
-![Alugue Já - Preview](link-da-screenshot-ou-gif-aqui)
+![Alugue Já - Preview](https://pedromilagre.github.io/Alugue_Ja/)
