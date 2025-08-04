@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alugue Já! - Locação de Veículos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <i class="fas fa-car text-3xl text-blue-600 mr-2"></i>
+            <a href="#" class="text-2xl font-bold text-blue-600">Alugue Já!</a>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#frota"
+              class="text-gray-600 hover:text-blue-600 font-medium"
+              >Frota</a
+            >
+            <a
+              href="#calculator"
+              class="text-gray-600 hover:text-blue-600 font-medium"
+              >Simulador</a
+            >
+            <a
+              href="#contato"
+              class="text-gray-600 hover:text-blue-600 font-medium"
+              >Contato</a
+            >
+          </div>
+          <div class="md:hidden">
+            <button class="text-gray-600 focus:outline-none">
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+      <div class="container mx-auto px-6 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Alugue seu carro agora mesmo!
+        </h1>
+        <p class="text-xl md:text-2xl mb-8">
+          A melhor frota com os melhores preços da região
+        </p>
+        <a
+          href="#frota"
+          class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full transition duration-300"
+          onclick="document.getElementById('frota').scrollIntoView({behavior: 'smooth'})"
+          >Ver Frota</a
+        >
+      </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="frota" class="py-12 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Nossa Frota
+        </h2>
+
+        <!-- Economy Cars -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-semibold mb-6 text-gray-700 border-b pb-2">
+            Carros Economy
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Car 1 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://quatrorodas.abril.com.br/wp-content/uploads/2020/07/Fiat-Uno-Drive-1-1-C%C3%B3pia.jpg"
+                alt="Fiat Uno cinza modelo Economy na cidade"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">Fiat Uno</h4>
+                <p class="text-gray-600 mb-4">
+                  Compacto e econômico, ideal para deslocamentos urbanos.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$120/dia + R$0.80/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Fiat Uno"
+                    data-daily="120"
+                    data-kmrate="0.80"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://quatrorodas.abril.com.br/wp-content/uploads/2020/09/Onix-Plus-Midnight-1-e1600867450747.jpg?quality=70&strip=info"
+                alt="Chevrolet Onix preto modelo Economy em estrada"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Chevrolet Onix
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Conforto e economia para viagens mais longas.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$130/dia + R$0.85/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Chevrolet Onix"
+                    data-daily="130"
+                    data-kmrate="0.85"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://2.bp.blogspot.com/-E4IjpjBG1zQ/XEBcmrvJIkI/AAAAAAAARrU/bd02VVBaZ48hCYRG-SyXqnS49Y_Fi4sGwCLcBGAs/s1600/Hyundai%2BHB20%2BR%2Bspec_1.jpg"
+                alt="Hyundai HB20 vermelho modelo Economy em cidade"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Hyundai HB20
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Design moderno e tecnologia avançada.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$125/dia + R$0.82/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Hyundai HB20"
+                    data-daily="125"
+                    data-kmrate="0.82"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intermediate Cars -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-semibold mb-6 text-gray-700 border-b pb-2">
+            Carros Intermediate
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Car 1 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://image1.mobiauto.com.br/images/api/images/v1.0/282088284/transform/fl_progressive,f_webp,q_70"
+                alt="Toyota Corolla preto modelo Intermediate em estrada"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Toyota Corolla
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Conforto e segurança em um sedan premium.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$150/dia + R$0.90/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Toyota Corolla"
+                    data-daily="150"
+                    data-kmrate="0.90"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9ff01a23-9d20-4446-a056-306819d168fe.png"
+                alt="Honda Civic preto modelo Standard estacionado"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Honda Civic
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Elegância e conforto para qualquer ocasião.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$160/dia + R$0.95/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Honda Civic"
+                    data-daily="160"
+                    data-kmrate="0.95"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/25925e25-4a9e-4ef9-911a-52b2542073ab.png"
+                alt="Volkswagen Jetta prata modelo Intermediate em rodovia"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Volkswagen Jetta
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Performance e sofisticação em um sedan.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$155/dia + R$0.92/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-601 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Volkswagen Jetta"
+                    data-daily="155"
+                    data-kmrate="0.92"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Premium Cars -->
+        <div class="mb-16">
+          <h3 class="text-2xl font-semibold mb-6 text-gray-700 border-b pb-2">
+            Carros Premium
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Car 1 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/be079b81-d95a-4262-8ea9-368bb9486764.png"
+                alt="BMW Série 3 preto modelo Premium em rodovia"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  BMW Série 3
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Performance e luxo em um sedan esportivo.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$250/dia + R$1.50/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="BMW Série 3"
+                    data-daily="250"
+                    data-kmrate="1.50"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/31cd0809-3b92-420c-ba5a-2bde9970d77e.png"
+                alt="Audi A4 cinza modelo Premium em cidade"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">Audi A4</h4>
+                <p class="text-gray-600 mb-4">
+                  Design elegante e tecnologia avançada.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$260/dia + R$1.60/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Audi A4"
+                    data-daily="260"
+                    data-kmrate="1.60"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d3bd70e-efad-470d-9845-d917620ee9ef.png"
+                alt="Mercedes-Benz Classe C prata modelo Premium"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Mercedes Classe C
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Conforto e estilo em um carro de luxo.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$270/dia + R$1.70/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Mercedes Classe C"
+                    data-daily="270"
+                    data-kmrate="1.70"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUV Cars -->
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-gray-700 border-b pb-2">
+            SUVs
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Car 1 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/64f63c22-7256-406b-b478-17b97854a04e.png"
+                alt="Jeep Compass branco modelo SUV em estrada de terra"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Jeep Compass
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  SUV robusto e espaçoso, ideal para aventuras.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$220/dia + R$1.20/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Jeep Compass"
+                    data-daily="220"
+                    data-kmrate="1.20"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 2 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2a7daf6c-2909-4514-8091-617d551f5146.png"
+                alt="Hyundai Creta prata modelo SUV em cidade"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Hyundai Creta
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Design moderno e tecnologia avançada.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$210/dia + R$1.15/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Hyundai Creta"
+                    data-daily="210"
+                    data-kmrate="1.15"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car 3 -->
+            <div class="car-card bg-white rounded-lg overflow-hidden shadow-lg">
+              <img
+                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bdcf3cb7-5c8e-40dd-8ada-47f46ad2ef5a.png"
+                alt="Chevrolet Tracker vermelho modelo SUV em estrada"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h4 class="text-xl font-bold text-gray-800 mb-2">
+                  Chevrolet Tracker
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  Compacto e versátil, ideal para cidade e viagens.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-blue-600 font-bold"
+                    >R$200/dia + R$1.10/km</span
+                  >
+                  <button
+                    class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded rent-btn"
+                    data-model="Chevrolet Tracker"
+                    data-daily="200"
+                    data-kmrate="1.10"
+                  >
+                    Alugar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="py-12 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Simule seu aluguel
+        </h2>
+
+        <div class="max-w-2xl mx-auto bg-gray-50 rounded-lg p-8 shadow-lg">
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >Modelo do Veículo</label
+              >
+              <select
+                id="carModel"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="economy">Economy (R$120/dia + R$0.80/km)</option>
+                <option value="intermediate">
+                  Intermediate (R$150/dia + R$0.90/km)
+                </option>
+                <option value="premium">Premium (R$250/dia + R$1.50/km)</option>
+                <option value="suv">SUV (R$220/dia + R$1.20/km)</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >Quantidade de Dias</label
+              >
+              <input
+                id="days"
+                type="number"
+                min="1"
+                value="1"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2"
+                >KM Previstos</label
+              >
+              <input
+                id="km"
+                type="number"
+                min="0"
+                value="100"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label class="block text-gray-700 font-medium mb-2">Seguro</label>
+              <select
+                id="insurance"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                <option value="basic">Básico (R$20/dia)</option>
+                <option value="full">Completo (R$40/dia)</option>
+              </select>
+            </div>
+          </div>
+
+          <button
+            id="calculateBtn"
+            class="w-full mt-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-300"
+          >
+            Calcular
+          </button>
+
+          <div id="result" class="mt-8 p-6 bg-blue-50 rounded-lg hidden">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">
+              Resultado da Simulação
+            </h3>
+            <div class="space-y-2">
+              <p class="flex justify-between">
+                <span class="text-gray-600">Valor Base:</span>
+                <span id="basePrice" class="font-medium">R$ 0,00</span>
+              </p>
+              <p class="flex justify-between">
+                <span class="text-gray-600">KM Rodados:</span>
+                <span id="kmPrice" class="font-medium">R$ 0,00</span>
+              </p>
+              <p class="flex justify-between">
+                <span class="text-gray-600">Seguro:</span>
+                <span id="insurancePrice" class="font-medium">R$ 0,00</span>
+              </p>
+              <p
+                class="flex justify-between text-lg font-bold pt-2 mt-2 border-t border-gray-200"
+              >
+                <span class="text-gray-800">Total:</span>
+                <span id="totalPrice" class="text-blue-600">R$ 0,00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-12 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Entre em Contato
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <form class="space-y-6">
+              <div>
+                <label class="block text-gray-700 font-medium mb-2">Nome</label>
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <div>
+                <label class="block text-gray-700 font-medium mb-2"
+                  >Mensagem</label
+                >
+                <textarea
+                  rows="5"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-lg transition duration-300"
+              >
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+
+          <div class="bg-white p-8 rounded-lg shadow-md">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">
+              Informações de Contato
+            </h3>
+
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium text-gray-800">Endereço</h4>
+                  <p class="text-gray-600">
+                    Praça Mauá - Centro. Rio de Janeiro, RJ
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-phone-alt text-blue-600 mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium text-gray-800">Telefone</h4>
+                  <p class="text-gray-600">(21) 2134-6587</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-blue-600 mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium text-gray-800">Email</h4>
+                  <p class="text-gray-600">contato@alugueja.com.br</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <i class="fas fa-clock text-blue-600 mt-1 mr-4"></i>
+                <div>
+                  <h4 class="font-medium text-gray-800">
+                    Horário de Funcionamento
+                  </h4>
+                  <p class="text-gray-600">Seg-Sex: 8h-18h<br />Sáb: 9h-14h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Alugue Já!</h3>
+            <p class="text-gray-400 mb-4">
+              A melhor experiência em aluguel de veículos com preço justo e
+              transparente.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Links Rápidos</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#frota" class="text-gray-400 hover:text-white"
+                  >Frota</a
+                >
+              </li>
+              <li>
+                <a href="#calculator" class="text-gray-400 hover:text-white"
+                  >Simulador</a
+                >
+              </li>
+              <li>
+                <a href="#contato" class="text-gray-400 hover:text-white"
+                  >Contato</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Termos de Uso</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Assine para receber ofertas exclusivas
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Seu email"
+                class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-800"
+              />
+              <button
+                class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-r-lg"
+              >
+                Assinar
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400"
+        >
+          <p>&copy; 2025 Alugue Já!. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Rental Modal -->
+    <div
+      id="rentalModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center"
+    >
+      <div class="bg-white rounded-lg p-6 max-w-md w-full">
+        <h3 class="text-xl font-bold mb-4">Finalizar Aluguel</h3>
+        <div id="modalContent" class="mb-4">
+          <!-- Content will be inserted here by JavaScript -->
+        </div>
+        <form id="rentalForm" class="space-y-4">
+          <div>
+            <label class="block text-gray-700 mb-2">Nome Completo</label>
+            <input
+              type="text"
+              required
+              class="w-full px-4 py-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2">CPF</label>
+            <input
+              type="text"
+              required
+              class="w-full px-4 py-2 border rounded-lg"
+            />
+          </div>
+          <div>
+            <label class="block text-gray-700 mb-2">Forma de Pagamento</label>
+            <select class="w-full px-4 py-2 border rounded-lg">
+              <option>Cartão de Crédito</option>
+              <option>Débito</option>
+              <option>PIX</option>
+            </select>
+          </div>
+          <div class="flex justify-end space-x-4">
+            <button
+              type="button"
+              id="cancelRental"
+              class="px-4 py-2 text-gray-600"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              class="px-4 py-2 bg-blue-600 text-white rounded-lg"
+            >
+              Confirmar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
